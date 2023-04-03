@@ -1,0 +1,11 @@
+# on démarre le moteur de réécriture
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ /index.php [L,QSA]
+#RewriteRule ^(.*)$ index.php?url=$1 [QSA, L]
+
+# RewriteRule ^([a-zA-Z0-9\-\_\/]*)$ index.php?p=$1
+# NC = No Case (not case sensitive, not really necessary since there are no characters in the pattern)
+# L = Last (it'll stop rewriting at after this Rewrite so make sure it's the last thing in your list of rewrites)
+# QSA = Query String Append, just in case you've got something like ?like=penguins on the end which you want to keep and pass to index.php.

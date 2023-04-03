@@ -1,0 +1,30 @@
+{% extends "Templates/layout.html.twig" %}
+{% block title %}
+{{ parent() }} - Home
+{% endblock %}
+{% block stylesheet %}
+{{ parent() }}
+{% endblock %}
+
+{% block content %}
+<main class="container">
+    <header class="container">
+        <hgroup>
+            <h1>Journey into Pico.css</h1>
+            <small><a href="https://picocss.com" target="_blank">https://picocss.com</a></small>
+        </hgroup>
+    </header>
+    <section class="container home-articles">
+        {% for article in articles %}
+        {% include 'Components/_card_articles.html.twig' %}
+        {% endfor %}
+    </section>
+    <footer class="container">
+        <section class="home-footer">
+            <h2>The css frameworks are very useful</h2>
+            <small>Learning them comes with practice</small>
+            <p>@2023 wilders | images @picsum</p>
+        </section>
+    </footer>
+</main>
+{% endblock %}

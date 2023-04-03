@@ -1,0 +1,26 @@
+{# layout.html.twig #}
+<!doctype html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %} Quest-Twig {% endblock %}</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    {% block stylesheet %}{% endblock %}
+    <link rel="icon" href="/assets/images/WildCodeSchool.ico">
+</head>
+
+<body>
+
+    {% include 'Components/_navbar.html.twig' %}
+
+    {% block content %}{% endblock %}
+
+    {% block javascript %}{% endblock %}
+</body>
+
+</html>

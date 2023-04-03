@@ -1,0 +1,26 @@
+nav {
+    background-color: #2C54A1;
+}
+
+nav ul,
+nav a,
+[role="link"] {
+    --color: #ffffff;
+}
+
+nav [role="link"]:is([aria-current], :hover, :active, :focus),
+nav a:is([aria-current], :hover, :active, :focus) {
+    background-color: #1B386B;
+}
+
+nav :where(a, [role="link"]),
+nav details[role="list"][open] summary,
+nav details[role="list"] summary+ul,
+nav li[role="list"]>ul {
+    border-radius: 0;
+}
+
+nav [role="link"]:is([aria-current], :hover, :active, :focus),
+nav a:is([aria-current], :hover, :active, :focus) {
+    --color: var(--primary-inverse);
+}

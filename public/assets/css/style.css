@@ -1,0 +1,85 @@
+/* Pink Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+    --primary: #2C54A1;
+    --secondary: #cecece;
+}
+
+header>hgroup {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.home-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing)
+}
+
+section.home-articles>article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+section.home-articles>article h5 {
+    color: var(--contrast-hover);
+}
+
+section.home-articles>article p {
+    height: 10vh;
+    padding-bottom: 0;
+}
+
+section.home-articles>article>header>img {
+    object-fit: cover;
+    width: 100%;
+}
+
+section.home-articles>article>header {
+    padding: 0;
+}
+
+section.home-articles>article>footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0;
+}
+
+section.home-articles>article>footer a {
+    border-radius: 0;
+}
+
+section.home-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing);
+    padding-block-start: calc(var(--spacing)*4);
+    background-color: var(--secondary);
+    text-align: center;
+}
+
+section.home-footer>h2 {
+    padding-inline: var(--spacing);
+}
+
+section.home-footer>small {
+    padding-block-end: calc(var(--spacing)*4);
+}
+
+section.home-footer>p {
+    background-color: var(--primary);
+    --color: var(--primary-inverse);
+    width: 100%;
+    padding-block: var(--spacing);
+    text-align: center;
+    margin-block-end: 0;
+}

@@ -1,0 +1,11 @@
+{
+    "name": "saussaye/quest-pico-css-template",
+    "require": {
+        "twig/twig": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}
